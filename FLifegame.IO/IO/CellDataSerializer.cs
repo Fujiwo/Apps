@@ -120,8 +120,9 @@ namespace FLifegame.IO
             using (var writer = new StreamWriter(filePath)) {
                 //await WriteHeaderAsync(writer);
                 //cellData.ToTexts(onCellCharacter, offCellCharacter).ForEach(async text => await writer.WriteAsync(text + '\n'));
-                WriteHeader(writer);
-                cellData.ToTexts(onCellCharacter, offCellCharacter).ForEach(text => writer.Write(text + '\n'));
+                var minimumCellData = cellData.ToMinimumData();
+                WriteHeader(writer, minimumCellData.Dimensions);
+                minimumCellData.ToTexts(onCellCharacter, offCellCharacter).ForEach(text => writer.Write(text + '\n'));
             }
         }
 
@@ -131,12 +132,12 @@ namespace FLifegame.IO
         //    await writer.WriteAsync("Life 1.05\n");
         //}
 
-        static void WriteHeader(StreamWriter writer)
+        static void WriteHeader(StreamWriter writer, Dimensions dimensions)
         {
             writer.Write(commentCharacter);
             writer.Write("Life 1.05\n");
             writer.Write(commentCharacter);
-            writer.Write("P -1 -1\n");
+            writer.Write(string.Format("P {0} {1}\n", -dimensions.Width / 2, -dimensions.Height / 2));
         }
 
         static string GetFilePath(string folderPath, string fileName, string fileExtension)
