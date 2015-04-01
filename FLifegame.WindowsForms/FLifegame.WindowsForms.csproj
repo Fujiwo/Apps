@@ -94,11 +94,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FLifegame.Core\FLifegame.IO.csproj">
+    <ProjectReference Include="..\FLifegame.IO\FLifegame.IO.csproj">
       <Project>{2af457b1-01a7-43b2-b82b-cb94a61bba36}</Project>
       <Name>FLifegame.IO</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FLifegame.Portable\FLifegame.Core.csproj">
+    <ProjectReference Include="..\FLifegame.Core\FLifegame.Core.csproj">
       <Project>{3e70f7a1-e7c2-4345-b7bf-240c650dc51d}</Project>
       <Name>FLifegame.Core</Name>
     </ProjectReference>

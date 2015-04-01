@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\FLifegame.Portable\FLifegame.Core.csproj">
+    <ProjectReference Include="..\FLifegame.Core\FLifegame.Core.csproj">
       <Project>{3e70f7a1-e7c2-4345-b7bf-240c650dc51d}</Project>
       <Name>FLifegame.Core</Name>
     </ProjectReference>

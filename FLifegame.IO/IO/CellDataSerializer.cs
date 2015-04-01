@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace FLifegame.IO
 {
-    //public interface ICellDataSerializer
+    //public interface ICellDataSerializerへｎ
     //{
     //    void Load(IDictionary<string, CellData> cellDataDictionary, string folderPath);
     //    void Save(IDictionary<string, CellData> cellDataDictionary, string folderPath);

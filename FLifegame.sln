@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FLifegame.IO", "FLifegame.Core\FLifegame.IO.csproj", "{2AF457B1-01A7-43B2-B82B-CB94A61BBA36}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FLifegame.IO", "FLifegame.IO\FLifegame.IO.csproj", "{2AF457B1-01A7-43B2-B82B-CB94A61BBA36}"
 	ProjectSection(ProjectDependencies) = postProject
 		{3E70F7A1-E7C2-4345-B7BF-240C650DC51D} = {3E70F7A1-E7C2-4345-B7BF-240C650DC51D}
 	EndProjectSection
@@ -23,7 +23,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FLifegame.Console", "FLifeg
 		{3E70F7A1-E7C2-4345-B7BF-240C650DC51D} = {3E70F7A1-E7C2-4345-B7BF-240C650DC51D}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FLifegame.Core", "FLifegame.Portable\FLifegame.Core.csproj", "{3E70F7A1-E7C2-4345-B7BF-240C650DC51D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FLifegame.Core", "FLifegame.Core\FLifegame.Core.csproj", "{3E70F7A1-E7C2-4345-B7BF-240C650DC51D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
