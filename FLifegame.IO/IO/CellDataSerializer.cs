@@ -100,11 +100,33 @@ namespace FLifegame.IO
             using (var reader = new StreamReader(filePath)) {
                 while (reader.Peek() >= 0) {
                     var text = await reader.ReadLineAsync();
-                    if (RemoveComment(ref text))
+                    var startPosition = GetStartPosition(text);
+                    if (startPosition == null && RemoveComment(ref text))
                         cellDataTexts.Add(text);
                 }
             }
             return cellDataTexts.ToCellData(onCellCharacter);
+        }
+
+        static Position GetStartPosition(string text)
+        {
+            text = text.Trim().ToUpper();
+            var index = text.IndexOf(commentCharacter);
+            if (index >= 0 && text.Length > index + 1) {
+                text = text.Substring(index + 1).Trim();
+                if (text.Length > 0 && text[0] == 'P') {
+                    text = text.Substring(1).Trim();
+                    var x = 0;
+                    var y = 0;
+                    var texts = text.Split(' ');
+                    if (texts.Length > 0)
+                        int.TryParse(texts[0], out x);
+                    if (texts.Length > 1)
+                        int.TryParse(texts[1], out y);
+                    return new Position { X = x, Y = y };
+                }
+            }
+            return null;
         }
 
         //static async Task SaveAsync(this CellData cellData, string filePath)
